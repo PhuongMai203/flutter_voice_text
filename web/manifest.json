@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "speech_to_text",
     "short_name": "speech_to_text",
+=======
+    "name": "voice",
+    "short_name": "voice",
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

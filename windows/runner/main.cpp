@@ -27,7 +27,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
   Win32Window::Size size(1280, 720);
+<<<<<<< HEAD
   if (!window.Create(L"speech_to_text", origin, size)) {
+=======
+  if (!window.Create(L"voice", origin, size)) {
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
     return EXIT_FAILURE;
   }
   window.SetQuitOnClose(true);

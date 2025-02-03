@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+<<<<<<< HEAD
 import 'package:permission_handler/permission_handler.dart';
+=======
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
 
 void main() {
   runApp(MyApp());
@@ -10,16 +13,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< HEAD
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.pink,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: SpeechToTextScreen(),
+=======
+      title: 'Speech to Text',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SpeechScreen(),
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
     );
   }
 }
 
+<<<<<<< HEAD
 class SpeechToTextScreen extends StatefulWidget {
   @override
   _SpeechToTextScreenState createState() => _SpeechToTextScreenState();
@@ -37,10 +49,22 @@ class _SpeechToTextScreenState extends State<SpeechToTextScreen> {
       await Permission.microphone.request();
     }
   }
+=======
+class SpeechScreen extends StatefulWidget {
+  @override
+  _SpeechScreenState createState() => _SpeechScreenState();
+}
+
+class _SpeechScreenState extends State<SpeechScreen> {
+  stt.SpeechToText _speechToText = stt.SpeechToText();
+  bool _isListening = false;
+  String _text = "Nhấn nút và bắt đầu nói...";
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
 
   @override
   void initState() {
     super.initState();
+<<<<<<< HEAD
     _checkPermissions();  // Kiểm tra quyền microphone khi app bắt đầu
   }
 
@@ -86,6 +110,24 @@ class _SpeechToTextScreenState extends State<SpeechToTextScreen> {
   }
 
   // Hàm dừng lắng nghe giọng nói
+=======
+    _speechToText.initialize();
+  }
+
+  void _startListening() async {
+    setState(() {
+      _isListening = true;
+    });
+    _speechToText.listen(
+      onResult: (result) {
+        setState(() {
+          _text = result.recognizedWords;
+        });
+      },
+    );
+  }
+
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
   void _stopListening() {
     setState(() {
       _isListening = false;
@@ -97,6 +139,7 @@ class _SpeechToTextScreenState extends State<SpeechToTextScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text(
           "Nhập văn bản bằng giọng nói",
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -173,8 +216,35 @@ class _SpeechToTextScreenState extends State<SpeechToTextScreen> {
               ),
             ],
           ),
+=======
+        title: Text("Nhập văn bản bằng giọng nói"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              _text,
+              style: TextStyle(fontSize: 24),
+            ),
+            SizedBox(height: 20),
+            IconButton(
+              icon: Icon(
+                _isListening ? Icons.mic : Icons.mic_none,
+                size: 40,
+                color: Colors.blue,
+              ),
+              onPressed: _isListening ? _stopListening : _startListening,
+            ),
+          ],
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
         ),
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2

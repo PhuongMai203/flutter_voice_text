@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
@@ -5,6 +6,19 @@
         android:label="speech_to_text"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+=======
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.voice"> <!-- Đảm bảo package đúng với tên gói của bạn -->
+
+    <!-- Khai báo quyền truy cập -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:label="voice"
+        android:icon="@mipmap/ic_launcher">
+
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -14,6 +28,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+<<<<<<< HEAD
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
@@ -22,26 +37,49 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+=======
+
+            <!-- Chỉ định theme cho Activity -->
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme"
+                />
+
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+=======
+
+        <!-- Dùng để Flutter tạo GeneratedPluginRegistrant.java -->
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+<<<<<<< HEAD
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
          https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
 
          In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+=======
+
+    <!-- Khai báo intent cho các activity xử lý văn bản -->
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
     <queries>
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
 </manifest>

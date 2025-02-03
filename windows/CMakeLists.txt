@@ -1,10 +1,18 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
+<<<<<<< HEAD
 project(speech_to_text LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "speech_to_text")
+=======
+project(voice LANGUAGES CXX)
+
+# The name of the executable created for the application. Change this to change
+# the on-disk name of your application.
+set(BINARY_NAME "voice")
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

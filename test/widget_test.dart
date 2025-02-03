@@ -8,12 +8,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+<<<<<<< HEAD
 import 'package:speech_to_text_example/main.dart';
+=======
+import 'package:voice/main.dart';
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
+<<<<<<< HEAD
     await tester.pumpWidget(MyApp());
+=======
+    await tester.pumpWidget(const MyApp());
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

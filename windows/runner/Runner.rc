@@ -90,12 +90,21 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
+<<<<<<< HEAD
             VALUE "FileDescription", "speech_to_text" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "speech_to_text" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "speech_to_text.exe" "\0"
             VALUE "ProductName", "speech_to_text" "\0"
+=======
+            VALUE "FileDescription", "voice" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "voice" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "voice.exe" "\0"
+            VALUE "ProductName", "voice" "\0"
+>>>>>>> c92b501e39da6a502be307c1d7073552c559c9b2
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
